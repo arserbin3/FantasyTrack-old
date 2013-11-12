@@ -1,5 +1,12 @@
-﻿@model Fantasy.ViewModels.BaseViewModel
+﻿@model Fantasy.ViewModels.HomeIndexViewModel
 
 <h2>
     title3
 </h2>
+
+<ul>
+    @foreach (var player in Model.Players)
+    {
+      <li>@player.Name - @player.Team - @player.Position</li>
+    }
+</ul>
