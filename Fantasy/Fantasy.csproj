@@ -156,14 +156,30 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\MiniProfiler.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\MigrationsConfig.cs" />
+    <Compile Include="Helpers\MiniProfilerHelper.cs" />
+    <Compile Include="Migrations\201311120341251_PlayerTeamKey.cs" />
+    <Compile Include="Migrations\201311120341251_PlayerTeamKey.Designer.cs">
+      <DependentUpon>201311120341251_PlayerTeamKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311120436258_TeamDivisionKey.cs" />
+    <Compile Include="Migrations\201311120436258_TeamDivisionKey.Designer.cs">
+      <DependentUpon>201311120436258_TeamDivisionKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\201311120327195_Initial.cs" />
+    <Compile Include="Migrations\201311120327195_Initial.Designer.cs">
+      <DependentUpon>201311120327195_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Division.cs" />
     <Compile Include="Models\FantasyContext.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\HomeIndexViewModel.cs" />
@@ -275,13 +291,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201311120327195_Initial.resx">
+      <DependentUpon>201311120327195_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311120341251_PlayerTeamKey.resx">
+      <DependentUpon>201311120341251_PlayerTeamKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311120436258_TeamDivisionKey.resx">
+      <DependentUpon>201311120436258_TeamDivisionKey.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
