@@ -7,6 +7,12 @@
 <ul>
     @foreach (var player in Model.Players)
     {
-      <li>@player.Name - @player.Team - @player.Position</li>
+      <li>@player.Name - @player.TeamID - @player.Position</li>
+    }
+</ul>
+<ul>
+    @foreach (var team in Model.Teams)
+    {
+      <li>@team.ID - @team.FullName - @team.Division.Name</li>
     }
 </ul>

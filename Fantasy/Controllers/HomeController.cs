@@ -2,7 +2,6 @@
 {
     using System.Linq;
     using System.Web.Mvc;
-    using Models;
     using ViewModels;
 
     public class HomeController : BaseController
@@ -11,7 +10,8 @@
         {
             var viewModel = new HomeIndexViewModel
             {
-                Players = new FantasyContext().Players.ToList()
+                Players = FantasyModel.Players.ToList(),
+                Teams = FantasyModel.Teams.ToList()
             };
 
             return View(viewModel);

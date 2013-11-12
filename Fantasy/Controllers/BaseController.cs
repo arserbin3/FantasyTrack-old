@@ -1,22 +1,25 @@
 ﻿namespace Fantasy.Controllers
 {
     using System.Web.Mvc;
+    using Helpers;
+    using Models;
     using StackExchange.Profiling;
 
     public class BaseController : Controller
     {
-        ////private DosDataContext _model;
+        private FantasyContext _model;
+
         ////private MillenniumDataContext _mill;
         ////private IntranetDataContext _intranet;
         private MiniProfiler _profiler;
 
-        ////public DosDataContext DosModel
-        ////{
-        ////    get
-        ////    {
-        ////        return _model ?? (_model = MiniProfilerHelper.Create<DosDataContext>());
-        ////    }
-        ////}
+        public FantasyContext FantasyModel
+        {
+            get
+            {
+                return _model ?? (_model = MiniProfilerHelper.Create<FantasyContext>());
+            }
+        }
 
         ////public IntranetDataContext IntranetModel
         ////{
